@@ -3,9 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
         <link rel="stylesheet" href="index.css">
         <title>SignUp</title>
     </head>
@@ -14,7 +11,39 @@
             <header></header>
             <main>
                 <form action="/to-backend" method="post">
-
+                    <legend>Sign Up</legend>
+                    <h1>Let's  do this!</h1>
+                    <fieldset>
+                        <label for="firstname">
+                            First Name
+                            <input type="text" id="firstname" name="first_name">
+                        </label>
+                        <label for="lastname">
+                            Last Name
+                            <input type="text" id="lastname" name="last_name">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label for="email">
+                            Email
+                            <input type="email" id="email" name="email_address">
+                        </label>
+                        <label for="phone">
+                            Phone Number
+                            <input type="phone" id="phone" name="phone_number">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label for="pwd">
+                            Password
+                            <input type="password" id="pwd" name="password">
+                        </label>
+                        <label for="pwdconfirm">
+                            Confirm Password
+                            <input type="password" id="pwdconfirm" name="password_confirm">
+                        </label>
+                    </fieldset>
+                    <button type="submit">Create Account</button>
                 </form>
             </main>
         </div>
