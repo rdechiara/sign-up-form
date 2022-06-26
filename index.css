@@ -11,7 +11,8 @@
     --already-account-margin: 1rem;
     --form-control-height: 3rem;
     --header-background: url("halie-west-25xggax4bSA-unsplash.jpg");
-    --header-flex: 1 0 30vw;
+    --header-width: 30vw;
+    --header-flex: 1 0 var(--header-width);
     --header-text-color: white;
     --heading-color: var(--header-text-color);
     --heading-alignment: center;
@@ -23,6 +24,13 @@
     --credits-color: var(--header-text-color);
     --credits-link-color: var(--header-text-color);
     --credits-link-decoration: underline ;
+    --main-width: calc(100vw - var(--header-width));
+    --main-flex: 2 1 var(--main-width);
+    --main-fonts: Verdana, Calibri, sans-serif;
+    --signup-textbox-height: 30vh;
+    --signup-textbox-flex: 3 0 var(--signup-textbox-height);
+    --signup-textbox-bg: #f9fafb;
+    --signup-textbox-width: 60vw;
 }
 html, body
 {
@@ -75,29 +83,32 @@ a.credits-link:visited
 {
     color: var(--credits-link-color);
 }
-main
+.main
 {
-    flex-grow: 2;
     display: flex;
     flex-direction: column;
-    font-family: Verdana, Calibri, sans-serif;
+    flex: var(--main-flex);
+    font-family: var(--main-fonts);
 }
-
-main > *
+.main > *
 {
     padding-left: var(--main-padding-left);
 }
-#form-text
+.signup-textbox
 {
-    flex-grow: 30;
     display: flex;
     flex-direction: row;
+    flex: var(--signup-textbox-flex);
     justify-content: flex-start;
     align-content: flex-end;
     flex-wrap: wrap;
-    background-color: #f9fafb;
+    background-color: var(--signup-textbox-bg);
 }
 
+.signup-textbox > .signup-text
+{
+    max-width: var(--signup-textbox-width);
+}
 form
 {
     margin-top: var(--form-margin-top);
@@ -128,12 +139,6 @@ fieldset
     height: 1px;
     border-bottom: black;
 }
-
-h3
-{
-    max-width: 60vw;
-}
-
 label
 {
     /*display: inline-block;
