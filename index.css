@@ -1,0 +1,239 @@
+@font-face
+{
+    font-family: 'Norse-Bold';
+    src: url('Norse-Bold.otf');
+}
+
+:root
+{
+    --main-padding-left: 3rem;
+    --form-margin-top: 1rem;
+    --already-account-margin: 1rem;
+    --form-control-height: 3rem;
+}
+html, body
+{
+    margin: 0;
+    border: 0;
+    padding:0;
+    height: 100vh;
+    width: 100vw;
+}
+#container
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 30vw;
+    background-size: cover;
+    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+    background-repeat: no-repeat;
+
+}
+header  p
+{
+    text-align: center;
+    color: white;
+}
+main
+{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Calibri, sans-serif;
+}
+
+main > *
+{
+    padding-left: var(--main-padding-left);
+}
+#form-text
+{
+    flex-grow: 30;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    background-color: #f9fafb;
+}
+
+form
+{
+    margin-top: var(--form-margin-top);
+    flex-grow: 30;
+    text-transform: uppercase;
+
+}
+
+footer
+{
+    flex-grow: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end ;
+}
+
+fieldset
+{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.separator
+{
+    width: 100%;
+    height: 1px;
+    border-bottom: black;
+}
+
+h3
+{
+    max-width: 60vw;
+}
+
+label
+{
+    /*display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;*/
+    font-size: small;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+button[type="submit"]
+{
+    background-color: #596D48;
+    color: white;
+    height: 3rem;
+    width: 14rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+/*fieldset
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}*/
+
+.submit
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+header p
+{
+    padding-bottom: -1rem;
+}
+header a
+{
+    color: white;
+    text-decoration: underline;
+}
+
+header a:visited
+{
+    font-style: italic;
+}
+.form-row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+input
+{
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: blue;
+    padding: 2rem;
+}
+input, label
+{
+    display: block;
+    margin-right: 5rem;
+    padding: 0;
+    height: var(--form-control-height, 3rem);
+}
+input:not(input[type="submit"])
+{
+    border-radius: 5px;
+    height: 1.5rem;
+    border-color: #E5E7EB;
+    border-style: solid;
+    border-width: thin;
+}
+input:focus
+{
+    outline: #596D48 solid 2px;
+}
+legend
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+small
+{
+    display: block;
+    margin-top: var(--already-account-margin);
+    text-transform: capitalize;
+}
+small > a
+{
+    color: #596D48;
+}
+footer
+{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+header > div
+{
+     display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+header > div:first-child
+{
+    justify-content: center;
+
+}
+
+header h1
+{
+    color: white;
+    text-align: center;
+    font-family: 'Norse-Bold', sans-serif;
+    font-size: 5rem;
+    background-color: rgba(0,0,0, 50%);
+    padding: 2rem;
+}
+
+.logo
+{
+    width: auto;
+    height: 6rem;
+}

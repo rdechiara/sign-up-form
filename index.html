@@ -7,44 +7,65 @@
         <title>SignUp</title>
     </head>
     <body>
-        <div id="app">
-            <header></header>
+        <div id="container">
+            <header >
+                <div>
+                    <h1><img class="logo" src="odin-lined.png" alt="odin logo">Odin</h1>
+                </div>
+                <div><p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a
+                        href="https://unsplash.com/">unsplash</a></p></div>
+            </header>
             <main>
-                <form action="/to-backend" method="post">
-                    <legend>Sign Up</legend>
-                    <h1>Let's  do this!</h1>
+                <div id="form-text">
+                    <h3>This is not a real online service! You know you need something like this in
+                    your life to help you realize your deepest dreams. Sign up <em>now</em> to get
+                    started.
+                    </h3>
+
+                    <h3>You <em>know</em> you want to.</h3>
+                </div>
+                <form>
+                    <legend>Let's do this!</legend>
+
                     <fieldset>
                         <label for="firstname">
                             First Name
-                            <input type="text" id="firstname" name="first_name">
+                            <input type="text" id="firstname" name="firstname" required>
                         </label>
                         <label for="lastname">
                             Last Name
-                            <input type="text" id="lastname" name="last_name">
+                            <input type="text" id="lastname" name="lastname" required>
                         </label>
+
                     </fieldset>
                     <fieldset>
                         <label for="email">
                             Email
-                            <input type="email" id="email" name="email_address">
+                            <input type="email" id="email" name="email" required>
                         </label>
-                        <label for="phone">
-                            Phone Number
-                            <input type="phone" id="phone" name="phone_number">
-                        </label>
+                        <label for="phone">Phone Number
+                        <input type="tel" id="phone" name="phone" required></label>
                     </fieldset>
+
                     <fieldset>
-                        <label for="pwd">
-                            Password
-                            <input type="password" id="pwd" name="password">
+                        <label for="password1">Password
+                        <input type="password" id="password1" name="password" minlength="8" required></label>
+
+                        <label for="password2">
+                            Confirm password
+                            <input type="password" id="password2" name="password" required>
                         </label>
-                        <label for="pwdconfirm">
-                            Confirm Password
-                            <input type="password" id="pwdconfirm" name="password_confirm">
-                        </label>
+
                     </fieldset>
-                    <button type="submit">Create Account</button>
+                    <div class="separator"></div>
+                    <div class="submit">
+                        <button type="submit">Create Account</button>
+
+                    </div>
+                    <small>Already have an account? <a href="#">Log in</a>.</small>
                 </form>
+
+                <footer>Copyright (C) your company 2022</footer>
             </main>
         </div>
     </body>
