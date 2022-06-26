@@ -10,6 +10,19 @@
     --form-margin-top: 1rem;
     --already-account-margin: 1rem;
     --form-control-height: 3rem;
+    --header-background: url("halie-west-25xggax4bSA-unsplash.jpg");
+    --header-flex: 1 0 30vw;
+    --header-text-color: white;
+    --heading-color: var(--header-text-color);
+    --heading-alignment: center;
+    --heading-font: 'Norse-Bold', sans-serif;
+    --heading-font-size: 5rem;
+    --heading-padding: 2rem;
+    --heading-background: rgba(0,0,0,50%);
+    --credits-align: center;
+    --credits-color: var(--header-text-color);
+    --credits-link-color: var(--header-text-color);
+    --credits-link-decoration: underline ;
 }
 html, body
 {
@@ -27,23 +40,40 @@ html, body
     flex-direction: row;
 }
 
-header
+.header
 {
     display: flex;
     justify-content: space-between;
-    flex-shrink: 0;
     flex-direction: column;
-    flex-grow: 1;
-    flex-basis: 30vw;
+    flex: var(--header-flex);
     background-size: cover;
-    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+    background-image: var(--header-background);
     background-repeat: no-repeat;
 
 }
-header  p
+.heading
 {
-    text-align: center;
-    color: white;
+    color: var(--heading-color);
+    text-align: var(--heading-alignment);
+    font-family: var(--heading-font);
+    font-size: var(--heading-font-size);
+    background-color: var(--heading-background);
+    padding: var(--heading-padding);
+}
+.credits
+{
+    text-align: var(--credits-align);
+    color: var(--credits-color);
+}
+
+.credits-link
+{
+    color: var(--credits-link-color);
+    text-decoration: var(--credits-link-decoration);
+}
+a.credits-link:visited
+{
+    color: var(--credits-link-color);
 }
 main
 {
@@ -139,21 +169,6 @@ button[type="submit"]
     justify-content: flex-start;
 }
 
-
-header p
-{
-    padding-bottom: -1rem;
-}
-header a
-{
-    color: white;
-    text-decoration: underline;
-}
-
-header a:visited
-{
-    font-style: italic;
-}
 .form-row
 {
     display: flex;
@@ -222,15 +237,7 @@ header > div:first-child
 
 }
 
-header h1
-{
-    color: white;
-    text-align: center;
-    font-family: 'Norse-Bold', sans-serif;
-    font-size: 5rem;
-    background-color: rgba(0,0,0, 50%);
-    padding: 2rem;
-}
+
 
 .logo
 {
