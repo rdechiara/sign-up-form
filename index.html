@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
         <title>SignUp</title>
     </head>
     <body>
@@ -48,14 +49,15 @@
                     </fieldset>
 
                     <fieldset>
-                        <label for="password1">Password
-                        <input type="password" id="password1" name="password" minlength="8" required></label>
+                        <label for="password1" id="lbl-pwd1">Password
+                        <input type="password" id="password1" name="password" minlength="8" required>
 
+                        </label>
                         <label for="password2">
                             Confirm password
                             <input type="password" id="password2" name="password" required>
                         </label>
-
+                        <small class="err-msg" id="err-msg">*Passwords do not match</small>
                     </fieldset>
                     <div class="separator"></div>
                     <div class="submit">
@@ -65,7 +67,7 @@
                     <small>Already have an account? <a href="#">Log in</a>.</small>
                 </form>
 
-                <footer>Copyright (C) your company 2022</footer>
+                <footer>Copyright (C) 2022 Your Company </footer>
             </main>
         </div>
     </body>

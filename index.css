@@ -237,3 +237,15 @@ header h1
     width: auto;
     height: 6rem;
 }
+
+.match-error
+{
+    outline: crimson solid 1px;
+}
+
+.err-msg
+{
+    color: red;
+    display: none;
+    margin: 1rem;
+}
